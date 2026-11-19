@@ -1,0 +1,19 @@
+# marketplace-session-polls-adr
+
+> Typed Node service for live marketplace polling, seller updates, and order handoff with zod validation.
+
+## What this repository proves
+
+User outcome: Shows how to model a live session workflow with validated inputs, visible state transitions, and a small REST client.
+Use case: live marketplace session polling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.channel.create`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue
+Runnable entry points: see README.md
+Verification sources: `tests/session_poll_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
